@@ -1,0 +1,21 @@
+{
+  "name": "@albanian-xrm/cif-types",
+  "version": "0.1.0",
+  "description": "Microsoft.CIFramework types from the community (us).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albanian-xrm/cif-types.git"
+  },
+  "keywords": [
+    "cif",
+    "channel-integration-framework",
+    "dataverse"
+  ],
+  "author": "AlbanianXrm",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/albanian-xrm/cif-types/issues"
+  },
+  "homepage": "https://github.com/albanian-xrm/cif-types#readme"
+}
