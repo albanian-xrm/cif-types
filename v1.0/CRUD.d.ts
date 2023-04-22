@@ -111,32 +111,32 @@ declare namespace Microsoft {
       id: string,
       data: string
     ): Promise<string>;
-  }
 
-  /**
-   * Deletes an entity record.
-   * @param entityLogicalName The entity logical name of the record you want to delete. For example: "account".
-   * @param id GUID of the entity record you want to delete.
-   * @returns On success, returns a promise containing a string with the attributes and their values.
-   * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/deleterecord External Link: deleteRecord}
-   * @example
-   * // delete contact record  with the id=b44d31ac-5fd1-e811-8158-000d3af97055d
-   * var id = "b44d31ac-5fd1-e811-8158-000d3af97055";
-   * var entityLogicalName = "contact";
-   * Microsoft.CIFramework.deleteRecord(entityLogicalName, id).then(
-   *     function success(result) {
-   *       res=JSON.parse(result);
-   *       console.log("Contact deleted with ID: " + res.contactid);
-   *       // the record is deleted
-   *     },
-   *     function (error) {
-   *         console.log(error.message);
-   *         // handle error conditions
-   *     }
-   * );
-   */
-  export function deleteRecord(
-    entityLogicalName: string,
-    id: string
-  ): Promise<string>;
+    /**
+     * Deletes an entity record.
+     * @param entityLogicalName The entity logical name of the record you want to delete. For example: "account".
+     * @param id GUID of the entity record you want to delete.
+     * @returns On success, returns a promise containing a string with the attributes and their values.
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/deleterecord External Link: deleteRecord}
+     * @example
+     * // delete contact record  with the id=b44d31ac-5fd1-e811-8158-000d3af97055d
+     * var id = "b44d31ac-5fd1-e811-8158-000d3af97055";
+     * var entityLogicalName = "contact";
+     * Microsoft.CIFramework.deleteRecord(entityLogicalName, id).then(
+     *     function success(result) {
+     *       res=JSON.parse(result);
+     *       console.log("Contact deleted with ID: " + res.contactid);
+     *       // the record is deleted
+     *     },
+     *     function (error) {
+     *         console.log(error.message);
+     *         // handle error conditions
+     *     }
+     * );
+     */
+    export function deleteRecord(
+      entityLogicalName: string,
+      id: string
+    ): Promise<string>;
+  }
 }
