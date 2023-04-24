@@ -1,6 +1,6 @@
 {
   "name": "@albanian-xrm/cif-types",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Microsoft.CIFramework types from the community (us).",
   "repository": {
     "type": "git",

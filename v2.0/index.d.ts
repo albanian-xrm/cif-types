@@ -1,4 +1,5 @@
 /// <reference path="../v1.0/ClickToAct.d.ts" />
+/// <reference path="../v1.0/Context.d.ts" />
 /// <reference path="../v1.0/CRUD.d.ts" />
 /// <reference path="../v1.0/EntityMetadata.d.ts" />
 /// <reference path="../v1.0/Environment.d.ts" />
