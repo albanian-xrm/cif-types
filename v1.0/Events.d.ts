@@ -160,19 +160,6 @@ declare namespace Microsoft {
     ): void;
 
     namespace EventArgs {
-      /**
-       * The CIFInitDone event is raised by the Dynamics 365 Channel Integration Framework library when Channel Integration Framework is loaded.
-       * This event is used to determine whether the Channel Integration Framework APIs are ready to be consumed.
-       * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/events/cifinitdone External Link: CIFInitDone event}
-       * @example
-       * (function () {
-       *     window.addEventListener("CIFInitDone", function () {
-       *         //Code that consumes CIF library APIs.
-       *     });
-       * })();
-       */
-      export interface CIFInitDone {}
-
       export interface ClickToAct {
         value: any;
         name: "string";
@@ -210,4 +197,23 @@ declare namespace Microsoft {
       }
     }
   }
+}
+
+interface Window {
+  /**
+   * The CIFInitDone event is raised by the Dynamics 365 Channel Integration Framework library when Channel Integration Framework is loaded.
+   * This event is used to determine whether the Channel Integration Framework APIs are ready to be consumed.
+   * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/events/cifinitdone External Link: CIFInitDone event}
+   * @example
+   * (function () {
+   *     window.addEventListener("CIFInitDone", function () {
+   *         //Code that consumes CIF library APIs.
+   *     });
+   * })();
+   */
+  addEventListener(
+    type: "CIFInitDone",
+    listener: () => void,
+    options?: boolean | AddEventListenerOptions
+  ): void;
 }
