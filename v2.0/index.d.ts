@@ -4,6 +4,7 @@
 /// <reference path="../v1.0/EntityMetadata.d.ts" />
 /// <reference path="../v1.0/Environment.d.ts" />
 /// <reference path="../v1.0/Events.d.ts" />
+/// <reference path="./Notification.d.ts" />
 /// <reference path="./PanelMode.d.ts" />
 /// <reference path="../v1.0/PanelWidth.d.ts" />
 /// <reference path="./Presence.d.ts" />
