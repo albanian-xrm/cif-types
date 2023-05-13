@@ -1,4 +1,4 @@
-/// <reference path="../v1.0/ClickToAct.d.ts" />
+/// <reference path="./ClickToAct.d.ts" />
 /// <reference path="../v1.0/Context.d.ts" />
 /// <reference path="./Conversation.d.ts" />
 /// <reference path="../v1.0/CRUD.d.ts" />
