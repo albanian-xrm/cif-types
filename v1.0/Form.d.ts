@@ -2,6 +2,8 @@ declare namespace Microsoft {
   namespace CIFramework {
     /**
      * Opens an entity form or a quick create form.
+     * @param entityFormOptions Entity form options for opening the form. This parameter is a serialized from {@link Microsoft.CIFramework.EntityFormOptions EntityFormOptions}
+     * @param formParameters A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error. For information about passing parameters to a form, see {@link https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/set-field-values-using-parameters-passed-form External Link: Set field values using parameters passed to a form} and {@link https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters External Link:  Configure a form to accept custom querystring parameters}
      * @returns On success, returns a Promise object containing string.
      * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/openform External Link: openForm}
      * @example
