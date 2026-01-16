@@ -1,5 +1,17 @@
 declare namespace Microsoft {
   namespace CIFramework {
+      /**
+     * Allows you to search among the records of a particular entity type. This API opens the Unified Interface entity page with the search field on it prepopulated with the search string that is passed as a parameter.
+     * @param entityLogicalName The entity logical name of the record you want to query such as "account".
+     * @param searchString String to search among the attributes of the entity records.
+     * @param Type of search page to open. `0` for relevance search and `1` for categorized search. If no parameter is provided, the records are searched by category.  For information on relevance search, see {@link https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization External Link: Configure Dataverse search}.
+     */
+    export function renderSearchPage(
+      entityLogicalName: string,
+      searchString: string,
+      searchType?: SearchType
+    ): Promise<void>;
+
     /**
      * The method searches for the record from the communication widget during the inbound communication and opens the record.
      * @param entityLogicalName Name of the entity to search and open.
@@ -20,7 +32,7 @@ declare namespace Microsoft {
      * @returns Returns a Promise object of type String. On success, the method returns the search results as per the search query.
      * @remarks You can fetch a maximum of 5000 records at once (if more than 5000 records exist). You can narrow down the results by using query options such as `$filter`, `$select`, and `$top` in the method parameters. See {@link https://learn.microsoft.com/en-us/odata/concepts/queryoptions-overview External Link: Query options overview}
      * @remarks To search based on relevance, you must configure relevance search. If relevance search isn't enabled, then the search will be performed based on category. See {@link https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization External Link: Configure Relevance Seach}
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/searchandopenrecords External Link: searchAndOpenRecords}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/searchandopenrecords External Link: searchAndOpenRecords}
      * @example
      * // retrieve contact record
      * Microsoft.CIFramework.searchAndOpenRecords("contact", "?$select=fullname,telephone1", false).
@@ -61,17 +73,8 @@ declare namespace Microsoft {
     ): Promise<string>;
 
     /**
-     * Allows you to search among the records of a particular entity type. This API opens the Unified Interface entity page with the search field on it prepopulated with the search string that is passed as a parameter.
-     * @param entityLogicalName The entity logical name of the record you want to query such as "account".
-     * @param searchString String to search among the attributes of the entity records.
-     * @param Type of search page to open. `0` for relevance search and `1` for categorized search. If no parameter is provided, the records are searched by category.  For information on relevance search, see {@link https://learn.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization External Link: Configure Dataverse search}.
+     * Type of search page to open. 0 for relevance search and 1 for categorized search. If no parameter is provided, the records are searched by category.
      */
-    export function renderSearchPage(
-      entityLogicalName: string,
-      searchString: string,
-      searchType?: SearchType
-    ): Promise<void>;
-
     export const enum SearchType {
       RelevanceSearch = 0,
       CategorizedSearch = 1,

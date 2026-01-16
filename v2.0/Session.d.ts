@@ -4,7 +4,7 @@ declare namespace Microsoft {
      * Allows you to check if a new session can be created.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Promise with the value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/cancreatesession External Link: canCreateSession}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/cancreatesession External Link: canCreateSession}
      */
     export function canCreateSession(correlationId?: string): Promise<boolean>;
 
@@ -14,7 +14,7 @@ declare namespace Microsoft {
      * If your organization uses single or multiple channel providers, then you can use this method to start a default session. More information: {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/support-multiple-providers External Link: Configure support for single and multiple channel providers}
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Promise with the value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/cancreatesession External Link: canCreateSession}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/cancreatesession External Link: canCreateSession}
      * @example
      * var input = {
      *   // unique name of the configured template
@@ -56,16 +56,24 @@ declare namespace Microsoft {
      * Returns an array of session identifiers for a provider.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Promise with the value as array of strings.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/getallsessions External Link: getAllSessions}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/getallsessions External Link: getAllSessions}
      */
     export function getAllSessions(correlationId?: string): Promise<string[]>;
+
+    /**
+     * Returns the unique identifier of the session that is in focus, if it belongs to the channel provider else returns null. The session ID is null if the connector attempts to retrieve a focused session created using a different connector.
+     * @param correlationId Used to group all related API calls together for diagnostic telemetry
+     * @returns Promise with the value as a string.
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/getfocusedsession External Link: getAllSessions}
+     */
+    export function getFocusedSession(): Promise<string>;
 
     /**
      * Returns an object containing the unique identifier of the session, unique identifier of the conversation, context and the value of isFocused parameter, in case the session belongs to the channel provider.
      * @param sessionId Id of the current session.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Object containing session Id, conversation Id, context and isFocused parameter
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/getsession External Link: getSession}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/getsession External Link: getSession}
      * @example
      * Microsoft.CIFramework.getSession("session-id-1").then(
      *      function success(result) {

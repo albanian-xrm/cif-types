@@ -7,7 +7,7 @@ declare namespace Microsoft {
      * @param isDelete Set isDelete to `true` if the list of parameters in input JSON are to be deleted. If isDelete is set to `true`, the slug values will be deleted and will no longer be available for subsequent macro invocations.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Returns a promise with string value.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/updatecontext External Link: updateContext}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/updatecontext External Link: updateContext}
      * @example
      * var input = { "customerName" : "Contosso" };
      * Microsoft.CIFramework.updateContext(input).then(

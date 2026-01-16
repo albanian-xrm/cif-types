@@ -13,7 +13,7 @@ declare namespace Microsoft {
      *   You can also pass custom events in the `eventName` parameter.
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      * @example
      * handlerFunction = function(eventData) {
      * console.log(eventData)
@@ -33,7 +33,7 @@ declare namespace Microsoft {
      * @param eventName Name of the event for which the handler is set. The event is invoked when the outbound communication (ClickToAct) field is enabled.
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      */
     export function addHandler(
       eventName: "onclicktoact",
@@ -46,7 +46,7 @@ declare namespace Microsoft {
      * @param eventName Name of the event for which the handler is set. The 'OnModeChanged' event is invoked when the panel mode is manually toggled between Minimized (0) and Docked (1).
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      * @example
      * handlerFunction = function(eventData) {
      * console.log(eventData)
@@ -66,7 +66,7 @@ declare namespace Microsoft {
      * @param eventName Name of the event for which the handler is set.
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      */
     export function addHandler(
       eventName: "onpagenavigate",
@@ -79,7 +79,7 @@ declare namespace Microsoft {
      * @param eventName Name of the event for which the handler is set.
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      */
     export function addHandler(
       eventName: "onsendkbarticle",
@@ -92,7 +92,7 @@ declare namespace Microsoft {
      * @param eventName Name of the event for which the handler is set.
      * @param handlerFunction The handler function is invoked when any of the supported events are triggered.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      */
     export function addHandler(
       eventName: "onsizechanged",
@@ -106,7 +106,7 @@ declare namespace Microsoft {
      * @param correlationId Is used to group all related API calls together for diagnostic telemetry.
      * @remark If you've created custom events using the {@link addHandler} method, then you can raise those events by passing the event name as parameter in this method.
      * @returns Promise with a value as Boolean.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      * @example
      * // Let there be an event registered to a subscriber.
      * handlerFunction = function(eventInput)
@@ -152,7 +152,7 @@ declare namespace Microsoft {
      *
      *   You can also pass custom events in the `eventName` parameter.
      * @param handlerFunction The handler function that is to removed.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/raiseevent External Link: raiseEvent}
      */
     export function removeHandler(
       eventName: string,

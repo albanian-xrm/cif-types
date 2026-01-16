@@ -1,5 +1,5 @@
 /// <reference path="./ClickToAct.d.ts" />
-/// <reference path="../v1.0/Context.d.ts" />
+/// <reference path="./Context.d.ts" />
 /// <reference path="./Conversation.d.ts" />
 /// <reference path="../v1.0/CRUD.d.ts" />
 /// <reference path="../v1.0/EntityMetadata.d.ts" />

@@ -3,7 +3,7 @@ declare namespace Microsoft {
     /**
      * Returns the entity metadata for the specified entity.
      * @returns An object containing the entity metadata information with the following form {@link EntityMetadata}.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/getentitymetadata External Link: getEntityMetadata}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/getentitymetadata External Link: getEntityMetadata}
      */
     export function getEntityMetadata(
       entityName: string,

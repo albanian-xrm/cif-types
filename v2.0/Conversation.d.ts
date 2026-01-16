@@ -6,7 +6,7 @@ declare namespace Microsoft {
      * @param data JSON string
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Returns a promise with string value.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/updateconversation External Link: updateConversation}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/updateconversation External Link: updateConversation}
      * @example
      * var data = {
      *      "subject": "Troubleshooting printer malfunction",

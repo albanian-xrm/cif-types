@@ -1,6 +1,20 @@
 declare namespace Microsoft {
   namespace CIFramework {
     /**
+     * Gets the current state of the panel.
+     * @returns Promise object with the value (current state of the panel). Values are defined in {@link PanelMode}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/getmode External Link: getMode}
+     */
+    export function getMode(): Promise<PanelMode>;
+
+    /**
+     * Sets the state of the panel.
+     * @param value The value to set the mode of the panel.
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/setmode External Link: setMode}
+     */
+    export function setMode(value: PanelMode): Promise<void>;
+
+        /**
      * The value to set the mode of the panel.
      */
     export const enum PanelMode {
@@ -13,19 +27,5 @@ declare namespace Microsoft {
        */
       Docked = 1,
     }
-
-    /**
-     * Gets the current state of the panel.
-     * @returns Promise object with the value (current state of the panel). Values are defined in {@link PanelMode}
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/getmode External Link: getMode}
-     */
-    export function getMode(): Promise<PanelMode>;
-
-    /**
-     * Sets the state of the panel.
-     * @param value The value to set the mode of the panel.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/setmode External Link: setMode}
-     */
-    export function setMode(value: PanelMode): Promise<void>;
   }
 }

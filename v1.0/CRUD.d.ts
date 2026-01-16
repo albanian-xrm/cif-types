@@ -5,7 +5,7 @@ declare namespace Microsoft {
      * @param entityLogicalName Logical name of the entity you want to create. For example: "account".
      * @param data String defining the attributes and values for the new entity record.
      * @returns On success, returns a promise containing a string with the attributes and their values.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/createrecord External Link: createRecord}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/createrecord External Link: createRecord}
      * @example
      * var entityLogicalName = "contact";
      * var data = {
@@ -49,7 +49,7 @@ declare namespace Microsoft {
      *    ?$select=name&$expand=primarycontactid($select=contactid,fullname)
      *    ```
      * @returns On success, returns a promise containing a string with the retrieved attributes and their values.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/retrieverecord External Link: retrieveRecord}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/retrieverecord External Link: retrieveRecord}
      * @example
      * // retrieve contact record
      * var id = "b44d31ac-5fd1-e811-8158-000d3af97055";
@@ -78,7 +78,7 @@ declare namespace Microsoft {
      * @param id GUID of the entity record you want to update.
      * @param data String containing key: value pairs, where key is the property of the entity and value is the value of the property you want to update.
      * @returns On success, returns a promise containing a string with the updated attributes and their values.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/updaterecord External Link: deleteRecord}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/updaterecord External Link: deleteRecord}
      * @example
      * //// define the data to update a record
      * var entityLogicalName = "contact";
@@ -117,7 +117,7 @@ declare namespace Microsoft {
      * @param entityLogicalName The entity logical name of the record you want to delete. For example: "account".
      * @param id GUID of the entity record you want to delete.
      * @returns On success, returns a promise containing a string with the attributes and their values.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/deleterecord External Link: deleteRecord}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/deleterecord External Link: deleteRecord}
      * @example
      * // delete contact record  with the id=b44d31ac-5fd1-e811-8158-000d3af97055d
      * var id = "b44d31ac-5fd1-e811-8158-000d3af97055";

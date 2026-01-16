@@ -5,7 +5,7 @@ declare namespace Microsoft {
      * @param cancellationToken Unique string that was provided in the {@link notifyEvent} method to display notifications about incoming conversations.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry.
      * @returns Returns the cancellation token.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/cancelevent External Link: cancelEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/cancelevent External Link: cancelEvent}
      * @example
      * // Trying to cancel a notification, use the same cancelToken passed during creation of notification in notifyEvent
      * Microsoft.CIFramework.cancelEvent(CancelToken).then(
@@ -30,7 +30,7 @@ declare namespace Microsoft {
      * @param correlationId Used to group all related API calls together for diagnostic telemetry.
      * @param cancellationToken Is the unique string that's used by the {@link cancelEvent} method to cancel notifications about incoming conversations.
      * @returns Returns a Boolean value of success.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/v2/reference/microsoft-ciframework/notifyevent External Link: notifyEvent}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/notifyevent External Link: notifyEvent}
      * @example
      * var canceltoken = "cancellationtoken"+ Math.ceil(Math.random() * 100000 + 100000).toString();
      *

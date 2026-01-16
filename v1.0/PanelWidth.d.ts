@@ -3,7 +3,7 @@ declare namespace Microsoft {
     /**
      * Gets the panel width in pixels.
      * @returns Returns a promise object containing the width of the panel, in pixels.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/getwidth External Link: getWidth}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/getwidth External Link: getWidth}
      */
     export function getWidth(): Promise<number>;
 
@@ -14,7 +14,7 @@ declare namespace Microsoft {
      * - If the value parameter passed for setWidth is greater than half of screen width, the side panel will collapse.
      * - The width should be greater than or equal to 300. The API doesn't consider any value less than 300.
      * @returns Returns a promise object with a value.
-     * @see {@link https://learn.microsoft.com/en-us/dynamics365/customer-service/channel-integration-framework/reference/microsoft-ciframework/setwidth External Link: setWidth}
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/setwidth External Link: setWidth}
      */
     export function setWidth(value: number): Promise<void>;
   }
