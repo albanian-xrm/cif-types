@@ -1,7 +1,7 @@
 declare namespace Microsoft {
   namespace CIFramework {
     /**
-     * This method allows you to update a Conversation(msdyn_ocliveworkitem) record.
+     * This method allows you to update a Conversation({@link https://learn.microsoft.com/en-us/dynamics365/customer-service/develop/reference/entities/msdyn_ocliveworkitem msdyn_ocliveworkitem}) record.
      * @param id Unique identifier of the conversation returned by {@link Microsoft.CIFramework.getSession Microsoft.CIFramework.getSession} API.
      * @param data JSON string
      * @param correlationId Used to group all related API calls together for diagnostic telemetry

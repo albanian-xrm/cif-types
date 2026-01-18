@@ -13,6 +13,6 @@ declare namespace Microsoft {
      * @returns Returns Promise object without value.
      * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v1/develop/reference/microsoft-ciframework/setclicktoact External Link: setClickToAct}
      */
-    export function setClickToAct(value: boolean): Promise<boolean>;
+    export function setClickToAct(value: boolean): Promise<void>;
   }
 }

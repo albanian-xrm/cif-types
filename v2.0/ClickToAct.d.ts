@@ -18,6 +18,6 @@ declare namespace Microsoft {
     export function setClickToAct(
       value: boolean,
       correlationId?: string
-    ): Promise<boolean>;
+    ): Promise<void>;
   }
 }

@@ -11,17 +11,17 @@ To use the types install `@albanian-xrm/cif-types` and add the following to your
 ```json
 "compilerOptions": {
         "types": [
-            "@albanian-xrm/cif-types/v1.0"
+            "@albanian-xrm/cif-types"
         ]
     }
 ```
 
-If you want CIFv2 then use the following configuration:
+If you want CIFv1 then use the following configuration:
 
 ```json
 "compilerOptions": {
         "types": [
-            "@albanian-xrm/cif-types"
+            "@albanian-xrm/cif-types/v1.0"
         ]
     }
 ```

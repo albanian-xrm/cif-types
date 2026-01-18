@@ -24,7 +24,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: string,
-      handlerFunction: (...args) => Promise<void>
+      handlerFunction: (...args) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -37,7 +37,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: "onclicktoact",
-      handlerFunction: (eventData: EventArgs.ClickToAct) => Promise<void>
+      handlerFunction: (eventData: EventArgs.ClickToAct) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -57,7 +57,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: "onmodechanged",
-      handlerFunction: (eventData: EventArgs.ModeChanged) => Promise<void>
+      handlerFunction: (eventData: EventArgs.ModeChanged) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -70,7 +70,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: "onpagenavigate",
-      handlerFunction: (eventData: EventArgs.PageNavigate) => Promise<void>
+      handlerFunction: (eventData: EventArgs.PageNavigate) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -83,7 +83,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: "onsendkbarticle",
-      handlerFunction: (eventData: EventArgs.SendKBArticle) => Promise<void>
+      handlerFunction: (eventData: EventArgs.SendKBArticle) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -96,7 +96,7 @@ declare namespace Microsoft {
      */
     export function addHandler(
       eventName: "onsizechanged",
-      handlerFunction: (eventData: EventArgs.SizeChanged) => Promise<void>
+      handlerFunction: (eventData: EventArgs.SizeChanged) => (void | Promise<void>)
     ): Promise<boolean>;
 
     /**
@@ -156,7 +156,7 @@ declare namespace Microsoft {
      */
     export function removeHandler(
       eventName: string,
-      handlerFunction: (eventData: EventArgs.SizeChanged) => Promise<void>
+      handlerFunction: (eventData: EventArgs.SizeChanged) => (void | Promise<void>)
     ): void;
 
     namespace EventArgs {

@@ -1,3 +1,5 @@
+/// <reference path="./ApplicationTabManagement.d.ts" />
+/// <reference path="./ChannelAnalytics.d.ts" />
 /// <reference path="./ClickToAct.d.ts" />
 /// <reference path="./Context.d.ts" />
 /// <reference path="./Conversation.d.ts" />

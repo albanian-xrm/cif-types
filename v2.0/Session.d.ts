@@ -37,22 +37,6 @@ declare namespace Microsoft {
     ): Promise<boolean>;
 
     /**
-     * Input for {@link Microsoft.CIFramework.createSession createSession}
-     */
-    interface CreateSessionInput {
-      /**
-       * Unique name of session template
-       */
-      templateName: string;
-      /**
-       * Global and application tab template parameters, these values will override configured values
-       */
-      templateParameters: {
-        [key: string]: number | boolean | string;       
-      };
-    }
-
-    /**
      * Returns an array of session identifiers for a provider.
      * @param correlationId Used to group all related API calls together for diagnostic telemetry
      * @returns Promise with the value as array of strings.
@@ -66,7 +50,7 @@ declare namespace Microsoft {
      * @returns Promise with the value as a string.
      * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/getfocusedsession External Link: getAllSessions}
      */
-    export function getFocusedSession(): Promise<string>;
+    export function getFocusedSession(correlationId?: string): Promise<string>;
 
     /**
      * Returns an object containing the unique identifier of the session, unique identifier of the conversation, context and the value of isFocused parameter, in case the session belongs to the channel provider.
@@ -90,5 +74,56 @@ declare namespace Microsoft {
       sessionId: string,
       correlationId?: string
     ): Promise<string>;
+
+    /**
+     * Shows a notification indicator on the session whose Session Id is passed as a parameter, if the session belongs to the channel provider. The notification indicator draws the user's attention to switch between sessions.
+     * @param sessionId Id of the session to be focused.
+     * @param correlationId Used to group all related API calls together for diagnostic telemetry
+     * @returns None.
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/requestfocussession External Link: requestFocusSession}
+     */
+    export function requestFocusSession(sessionId: string, correlationId?: string): Promise<void>;
+
+    /**
+     * Returns an object containing the unique identifier of the session, unique identifier of the conversation, context and the value of isFocused parameter, in case the session belongs to the channel provider.
+     * @param sessionId Id of the current session.
+     * @param correlationId Used to group all related API calls together for diagnostic telemetry
+     * @returns Object containing session Id, conversation Id, context and isFocused parameter
+     * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/getsession External Link: getSession}
+     * @example
+     * var input = {
+     *     sessionId: "session-id-16",
+     *     customer: "John"
+     * };
+     * // setSessionTitle needs two params in input bag.
+     * // 1. sessionId
+     * // 2. slug name which we use in title field of session template record.. In sample, we have given value as "Call from {customer}"
+     * // hence we pass "customer" in the input bag parameter.
+     * Microsoft.CIFramework.setSessionTitle(input);
+     */
+    export function setSessionTitle(
+      input: SessionInfo,
+      correlationId?: string
+    ): Promise<string>;
+
+    interface SessionInfo {
+      [prop:string]: 'sessionId' extends typeof prop? string :  number | boolean | string;
+    }
+
+    /**
+     * Input for {@link Microsoft.CIFramework.createSession createSession}
+     */
+    interface CreateSessionInput {
+      /**
+       * Unique name of session template
+       */
+      templateName: string;
+      /**
+       * Global and application tab template parameters, these values will override configured values
+       */
+      templateParameters: {
+        [key: string]: number | boolean | string;       
+      };
+    }
   }
 }

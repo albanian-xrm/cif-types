@@ -29,7 +29,7 @@ declare namespace Microsoft {
      * @param input JSON string
      * @param correlationId Used to group all related API calls together for diagnostic telemetry.
      * @param cancellationToken Is the unique string that's used by the {@link cancelEvent} method to cancel notifications about incoming conversations.
-     * @returns Returns a Boolean value of success.
+     * @returns Returns a Promise with a string value.
      * @see {@link https://learn.microsoft.com/en-us/dynamics365/channel-integration-framework/v2/develop/reference/microsoft-ciframework/notifyevent External Link: notifyEvent}
      * @example
      * var canceltoken = "cancellationtoken"+ Math.ceil(Math.random() * 100000 + 100000).toString();
@@ -53,7 +53,10 @@ declare namespace Microsoft {
     export function notifyEvent(
       input: NotifyEventArgs,
       correlationId?: string
-    ): Promise<string>;
+    ): Promise<'{actionName: "Timeout", responseReason: "DisplayTimeout"}' | 
+               '{actionName: "Reject", responseReason: "DeclinedByAgent"}' |
+               '{"actionName":"Accept","responseReason":"Accept"}' |
+               void>;
 
     export interface NotifyEventArgs {
       eventType?: string;
